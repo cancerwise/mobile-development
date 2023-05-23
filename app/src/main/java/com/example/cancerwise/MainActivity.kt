@@ -11,6 +11,7 @@ import com.example.cancerwise.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    //viewbinding
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
