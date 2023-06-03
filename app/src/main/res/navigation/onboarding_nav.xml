@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/viewPagerFragment"
-        android:name="com.example.cancerwise.ui.ViewPagerFragment"
+        android:name="com.example.cancerwise.ui.onboarding.ViewPagerFragment"
         android:label="fragment_view_pager"
         tools:layout="@layout/fragment_view_pager" />
 </navigation>

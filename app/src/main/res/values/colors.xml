@@ -13,5 +13,6 @@
     <color name="blue1">#19A7CE</color>
     <color name="blue2">#146C94</color>
     <color name="lessdark">#3E3E3E</color>
+    <color name="lesserdark">#606060</color>
 
 </resources>

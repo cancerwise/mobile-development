@@ -1,25 +1,26 @@
 package com.example.cancerwise.ui.start
 
+import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
-import com.example.cancerwise.AuthViewModel
+import com.example.cancerwise.ui.auth.AuthViewModel
 import com.example.cancerwise.MainActivity
+import com.example.cancerwise.data.ViewModelFactory
 import com.example.cancerwise.databinding.ActivityStartBinding
-import com.example.cancerwise.ui.login.LoginBottomSheet
-import com.example.cancerwise.ui.register.RegisterBottomSheet
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
+import com.example.cancerwise.ui.auth.login.LoginBottomSheet
+import com.example.cancerwise.ui.auth.register.RegisterBottomSheet
 
 
 class StartActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityStartBinding
-    private val viewModel: AuthViewModel by viewModels()
-
+    private val viewModel: AuthViewModel by viewModels {
+        ViewModelFactory(application)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

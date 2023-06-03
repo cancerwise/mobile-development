@@ -1,5 +1,6 @@
 package com.example.cancerwise.data
 
+import android.app.Application
 import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -9,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.userProfileChangeRequest
 import kotlinx.coroutines.flow.MutableStateFlow
 
-class AuthRepository {
+class AuthRepository(application: Application) {
 
     private val _authState by lazy { MutableLiveData<AuthState>(AuthState.Idle) }
     val authState: LiveData<AuthState> = _authState
