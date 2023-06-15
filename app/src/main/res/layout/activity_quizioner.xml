@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.quizioner.QuizionerActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/data_process" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_ly"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/dm_serif_regular"
+                    android:text="Cancer Wise"
+                    android:textSize="20sp"
+                    android:textColor="@color/blue2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/exit"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/baseline_close_24_blue"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="Title"
+            android:textColor="@color/lessdark"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/cardView3"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+        <TextView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:fontFamily="@font/inter_bold"
+            android:text="7 / 12"
+            android:textColor="#656565"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardView3"
+            app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:fontFamily="@font/inter_bold"
+            android:text="Are you smoking?"
+            android:textColor="@color/lessdark"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/ly_btm"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarHorizontal" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBarHorizontal"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="100"
+            android:minHeight="50dp"
+            android:minWidth="200dp"
+            android:progress="1"
+            android:layout_marginHorizontal="20dp"
+            android:progressBackgroundTint="@color/blue2"
+            android:progressTint="@color/blue1"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <LinearLayout
+            android:id="@+id/ly_btm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginVertical="20dp"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintEnd_toEndOf="@+id/btn_next"
+            app:layout_constraintStart_toStartOf="@+id/btn_next">
+
+            <TextView
+                android:id="@+id/ans_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note*"
+                android:textSize="20sp"
+                android:textColor="#E91E63"
+                android:layout_margin="10dp"/>
+
+            <RadioGroup
+                android:id="@+id/bool_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <RadioButton
+                    android:id="@+id/yes"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="@drawable/radio_yes"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="Yes"
+                    android:textColor="@drawable/radio_text_yes" />
+
+                <RadioButton
+                    android:id="@+id/no"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/radio_no"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="No"
+                    android:textColor="@drawable/radio_text_no" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/int_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_white_stroke_alt"
+                android:drawableStart="@drawable/baseline_person_24"
+                android:drawablePadding="12dp"
+                android:fontFamily="@font/inter"
+                android:hint="Enter your answer"
+                android:inputType="number"
+                android:maxLines="1"
+                android:minHeight="48dp"
+                android:padding="12.5dp"
+                android:selectAllOnFocus="true"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_next"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/btn_bg_quizioner"
+            android:fontFamily="@font/inter_bold"
+            android:text="Next"
+            android:enabled="false"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_text_quizioner"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_end"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:enabled="false"
+            android:background="@drawable/btn_bg_quizioner"
+            android:fontFamily="@font/inter_bold"
+            android:text="End"
+            android:layout_marginBottom="20dp"
+            android:textAllCaps="false"
+            android:textColor="@drawable/btn_text_quizioner"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

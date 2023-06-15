@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.quizioner.ResultActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:contentDescription="Scroolview"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/inter_xbold"
+                android:text="Your Report"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:gravity="center"
+                        android:layout_margin="20dp"
+                        android:text="We calculate that there's strong evidence based on your data, You have high chance of having Brain Tumor"
+                        android:textColor="@color/lessdark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dm_serif_regular"
+                        android:text="Cancer Wise"
+                        android:gravity="right"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/blue2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:src="@drawable/icon_report"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5">
+
+                    <TextView
+                        android:id="@+id/tv_result_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Id : 909992"
+                        android:textColor="@color/lessdark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_result_tittle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Tittle : Lung Cancer"
+                        android:textColor="@color/lessdark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Date : 19:00, 22/12/2022"
+                        android:textColor="@color/lessdark"
+                        android:textSize="16sp" />
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/tv_score"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/inter"-->
+<!--                        android:text="Score : 98"-->
+<!--                        android:textColor="@color/lessdark"-->
+<!--                        android:textSize="16sp" />-->
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="120dp"
+                    android:layout_height="0.6dp"
+                    android:background="#656565" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Conducted by"
+                    android:textColor="#656565" />
+
+                <View
+                    android:layout_width="120dp"
+                    android:layout_height="0.6dp"
+                    android:background="#656565" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp">
+
+                <ImageView
+                    android:id="@+id/img_acc"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginHorizontal="40dp"
+                    android:src="@drawable/icon_acc"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_acc"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/img_acc"
+                    app:layout_constraintTop_toTopOf="@+id/img_acc">
+
+                    <TextView
+                        android:id="@+id/tv_result_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Name : Abdillah P"
+                        android:textColor="@color/lessdark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_result_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Age : 21"
+                        android:textColor="@color/lessdark"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_result_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:text="Gender : Male"
+                        android:textColor="@color/lessdark"
+                        android:textSize="16sp" />
+
+                    <!--                    <TextView-->
+                    <!--                        android:id="@+id/tv_result_condition"-->
+                    <!--                        android:layout_width="wrap_content"-->
+                    <!--                        android:layout_height="wrap_content"-->
+                    <!--                        android:fontFamily="@font/inter"-->
+                    <!--                        android:text="Condition : Healthy"-->
+                    <!--                        android:textColor="@color/lessdark"-->
+                    <!--                        android:textSize="16sp" />-->
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="103dp"
+                    android:layout_height="0.6dp"
+                    android:background="#656565" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:fontFamily="@font/inter"
+                    android:text="We Suggest You to"
+                    android:textColor="#656565" />
+
+                <View
+                    android:layout_width="103dp"
+                    android:layout_height="0.6dp"
+                    android:background="#656565" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sugest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="To become healthier, focus on adopting positive lifestyle choices and habits. Start by eating a balanced diet that includes fruits, vegetables, whole grains, lean proteins. Find healthy ways to manage stress, such as practicing mindfulness and engaging in activities you enjoy. Avoid tobacco, limit alcohol consumption, and practice good hygiene. Maintain a healthy weight through a balanced diet and regular exercise."
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="read more..."
+                android:textSize="16sp"
+                android:textColor="#2196F3"
+                android:gravity="right"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="20dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_takequiz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_blue_alt"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Confirm and Take Action"
+                    android:textAllCaps="false"
+                    android:textColor="#EEEEEE"
+                    app:backgroundTint="@null" />
+
+                <Button
+                    android:id="@+id/btn_record"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/btn_white_stroke_alt"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Share"
+                    android:textAllCaps="false"
+                    android:textColor="#5A5A5A"
+                    app:backgroundTint="@null" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
