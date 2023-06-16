@@ -54,14 +54,14 @@
             android:textColor="@color/lessdark"
             android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/tv_history_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter"
-            android:text="Score : 98"
-            android:textColor="@color/lessdark"
-            android:textSize="16sp" />
+<!--        <TextView-->
+<!--            android:id="@+id/tv_history_score"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/inter"-->
+<!--            android:text="Score : 98"-->
+<!--            android:textColor="@color/lessdark"-->
+<!--            android:textSize="16sp" />-->
 
     </LinearLayout>
 

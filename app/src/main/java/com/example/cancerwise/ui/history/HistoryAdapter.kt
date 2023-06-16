@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cancerwise.ui.DetailResultActivity
 import com.example.cancerwise.R
@@ -20,7 +21,7 @@ class HistoryAdapter(private val dataSet: ArrayList<History>) :
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val title: TextView
         val date: TextView
-        val score: TextView
+//        val score: TextView
         val id: TextView
 
         init {
@@ -28,7 +29,7 @@ class HistoryAdapter(private val dataSet: ArrayList<History>) :
             title = view.findViewById(R.id.tv_history_tittle)
             date = view.findViewById(R.id.tv_history_date)
             id = view.findViewById(R.id.tv_history_id)
-            score = view.findViewById(R.id.tv_history_score)
+//            score = view.findViewById(R.id.tv_history_score)
 
         }
     }
@@ -53,13 +54,14 @@ class HistoryAdapter(private val dataSet: ArrayList<History>) :
 
         viewHolder.title.text = placeHolder("Title", dataSet[position].quizTitle)
         viewHolder.date.text = placeHolder("Date", dataSet[position].date)
-        viewHolder.score.text = placeHolder("Score", dataSet[position].score.toString())
         viewHolder.id.text = placeHolder("Id", dataSet[position].id.toString())
 
         viewHolder.itemView.setOnClickListener {
-            val intent = Intent(viewHolder.itemView.context, DetailResultActivity::class.java)
+//            val intent = Intent(viewHolder.itemView.context, DetailResultActivity::class.java)
+//
+//            viewHolder.itemView.context.startActivity(intent)
 
-            viewHolder.itemView.context.startActivity(intent)
+            Toast.makeText(viewHolder.itemView.context, "Will be added soon...", Toast.LENGTH_SHORT).show()
         }
     }
 

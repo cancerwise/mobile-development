@@ -16,6 +16,8 @@ import com.example.cancerwise.data.ViewModelFactory
 import com.example.cancerwise.model.Quizioner
 import com.example.cancerwise.databinding.ActivityQuizionerBinding
 import com.example.cancerwise.model.SimpleAnswers
+import com.example.cancerwise.model.SimpleResponse
+import com.example.cancerwise.ui.quizioner.ResultActivity.Companion.EXTRA_ACTION
 import com.example.cancerwise.ui.quizioner.ResultActivity.Companion.EXTRA_RESULT
 import com.example.cancerwise.ui.quizioner.ResultActivity.Companion.EXTRA_TITLE
 import com.example.cancerwise.utils.Utils
@@ -125,7 +127,7 @@ class QuizionerActivity : AppCompatActivity() {
                         is Resource.Error -> onFailed(it.message)
                         is Resource.Loading -> onLoading()
                         is Resource.Success -> it.data?.let { it1 ->
-                            onSuccess(it1.status)
+                            onSuccess(it1)
                         }
                     }
                 }
@@ -209,16 +211,16 @@ class QuizionerActivity : AppCompatActivity() {
             }
         }
     }
-    private fun onSuccess(message: String?) {
-        Toast.makeText(this@QuizionerActivity, message.toString(), Toast.LENGTH_SHORT).show()
+    private fun onSuccess(data: SimpleResponse) {
 
         binding.mainLy.visibility = View.VISIBLE
         binding.animationView.visibility = View.GONE
 
         val title = viewModel.getQuizData(intent.getIntExtra(EXTRA_ID, 0)).name
         val intent = Intent(this, ResultActivity::class.java)
-            .putExtra(EXTRA_RESULT, message)
-            .putExtra(EXTRA_TITLE, title )
+            .putExtra(EXTRA_RESULT, data.status)
+            .putExtra(EXTRA_ACTION, data.action)
+            .putExtra(EXTRA_TITLE, title)
 
         startActivity(intent)
         finish()

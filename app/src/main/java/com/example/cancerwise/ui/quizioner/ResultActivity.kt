@@ -51,6 +51,7 @@ class ResultActivity : AppCompatActivity() {
         binding.tvResultName.text = auth.currentUser?.displayName
         binding.tvResult.text = intent.getStringExtra(EXTRA_RESULT)
         binding.tvResultTittle.text = intent.getStringExtra(EXTRA_TITLE)
+        binding.tvResultAction.text = intent.getStringExtra(EXTRA_ACTION )
 
         val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")
         val current = LocalDateTime.now().format(formatter)
@@ -60,6 +61,7 @@ class ResultActivity : AppCompatActivity() {
 
     companion object {
         const val EXTRA_RESULT = "extra_result"
+        const val EXTRA_ACTION = "extra_action"
         const val EXTRA_TITLE = "extra_title"
     }
 

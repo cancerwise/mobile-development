@@ -177,6 +177,8 @@ class HomeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
+        setUpBottomDetail()
+
 //        handler.postDelayed(runnable , 2000)
     }
 
