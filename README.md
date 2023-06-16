@@ -3,6 +3,11 @@ The repository for mobile development path cohort
 
 ## Features
 * **Auth Feature :**  powered with firebase auth allowing user to login, register, logout faster and reliable
+* <span>
+  <img src="https://github.com/cancerwise/mobile-development/assets/75846203/bead0918-306e-494e-8973-9103c6d1b7cb" width="180px" height="320px" />
+  <img src="https://github.com/cancerwise/mobile-development/assets/75846203/04e40752-5852-4131-a226-cc371e46e02f" width="180px" height="320px" />
+  <img src="https://github.com/cancerwise/mobile-development/assets/75846203/5a2e8af9-fd4c-4ee0-bb07-469c0102d08e" width="180px" height="320px" />
+</span>
 ![Screenshot_2023-06-13-14-36-49-728_com example](https://github.com/cancerwise/mobile-development/assets/75846203/bead0918-306e-494e-8973-9103c6d1b7cb)
 ![Screenshot_2023-06-14-09-30-29-621_com example cancerwise](https://github.com/cancerwise/mobile-development/assets/75846203/04e40752-5852-4131-a226-cc371e46e02f)
 ![Screenshot_2023-06-14-09-30-33-271_com example cancerwise](https://github.com/cancerwise/mobile-development/assets/75846203/5a2e8af9-fd4c-4ee0-bb07-469c0102d08e)
